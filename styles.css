@@ -1,0 +1,39 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #2f2c37;
+}
+
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vs {
+    font-family: 'Nunito', sans-serif;
+    font-size: 70px;
+    color : gainsboro;
+    margin-top: 85px;
+}
+
+.player-num {
+    font-family: 'Tilt Neon', cursive;
+    color: #26b226;
+}
+
+.player-text {
+    margin-top: 5px;
+    font-family: 'Signika', sans-serif;
+}
