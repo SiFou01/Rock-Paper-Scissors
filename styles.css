@@ -85,6 +85,11 @@ h2 {
     background-color: #008170;
 }
 
+.clicked {
+    box-shadow: 0px 2px 12px 6px #226b67;
+    background-color: #008170;
+}
+
 svg.paper {
     margin-top: 8px;
 }
