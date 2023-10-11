@@ -24,18 +24,28 @@ function getUserChoice(userChoice) {
     return userChoice;
 }
 
+let machineRock = document.getElementById("machineRock");
+let machinePaper = document.getElementById("machinePaper");
+let machineScissors = document.getElementById("machineScissors");
+
 
 function getMachineChoice() {
+    machineRock.classList.remove("clicked");
+    machinePaper.classList.remove("clicked");
+    machineScissors.classList.remove("clicked");
     let machineChoice = Math.floor((Math.random() * 3) + 1);
     switch (machineChoice) {
         case 1:
             machineChoice = "rock";
+            machineRock.classList.add("clicked");
             break;
         case 2:
             machineChoice = "paper";
+            machinePaper.classList.add("clicked");
             break;
         case 3:
             machineChoice = "scissors";
+            machineScissors.classList.add("clicked");
     }
     return machineChoice;
 }
