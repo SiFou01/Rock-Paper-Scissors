@@ -10,6 +10,7 @@ body {
 
 .header {
     padding: 10px;
+    padding-bottom: 0;
     display: flex;
     justify-content: space-evenly;
 }
@@ -29,11 +30,61 @@ body {
 }
 
 .player-num {
-    font-family: 'Tilt Neon', cursive;
+    font-family: 'Signika', cursive;
     color: #26b226;
 }
 
 .player-text {
     margin-top: 5px;
     font-family: 'Signika', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.weapons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.rps {
+    align-self: center;
+    padding: 5px;
+    border: #211249 solid 3px;
+    background-color: #3f3f56;
+    height: 95px;
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 17px 10px #1f1f31;
+}
+
+.left .rps:hover {
+    box-shadow: 0px 2px 17px 10px #0a3670;
+    background-color: #282865;
+}
+
+svg.paper {
+    margin-top: 8px;
+}
+
+.rps.scissors-left {
+    margin-left: 28px;
+}
+
+.rps.scissors-right {
+    margin-right: 28px;
 }
