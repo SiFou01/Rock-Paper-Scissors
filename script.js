@@ -34,3 +34,24 @@ function getMachineChoice() {
     }
     return machineChoice;
 }
+
+let machineScore = 0;
+let userScore = 0;
+
+function playGame(userChoice) {
+   userChoice = getUserChoice(userChoice);
+   machineChoice = getMachineChoice();
+   if (userChoice === machineChoice) {
+    console.log("draw");
+   }
+   else if (userChoice === "rock" && machineChoice === "scissors" 
+        ||  userChoice === "paper" && machineChoice === "rock"
+        ||  userChoice === "scissors" && machineChoice === "paper") {
+    console.log("You win");
+    userScore++;
+   }
+   else {
+    console.log("you lose");
+    machineScore++;
+   }
+}
