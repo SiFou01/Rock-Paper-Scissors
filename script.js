@@ -19,3 +19,18 @@ function getUserChoice(userChoice) {
     return userChoice;
 }
 
+
+function getMachineChoice() {
+    let machineChoice = Math.floor((Math.random() * 3) + 1);
+    switch (machineChoice) {
+        case 1:
+            machineChoice = "rock";
+            break;
+        case 2:
+            machineChoice = "paper";
+            break;
+        case 3:
+            machineChoice = "scissors";
+    }
+    return machineChoice;
+}
