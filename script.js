@@ -2,6 +2,9 @@ let rockBtn = document.getElementById("rock");
 let paperBtn = document.getElementById("paper");
 let scissorsBtn = document.getElementById("scissors");
 
+let round = document.getElementById("round");
+
+let roundNum = 0;
 function getUserChoice(userChoice) {
     rockBtn.classList.remove("clicked");
     paperBtn.classList.remove("clicked");
@@ -16,6 +19,8 @@ function getUserChoice(userChoice) {
         case "scissors" : 
         scissorsBtn.classList.add("clicked")
     }
+    roundNum++;
+    round.textContent = `#Round ${roundNum}`;
     return userChoice;
 }
 
@@ -38,20 +43,22 @@ function getMachineChoice() {
 let machineScore = 0;
 let userScore = 0;
 
+let result = document.getElementById("result");
+
 function playGame(userChoice) {
    userChoice = getUserChoice(userChoice);
    machineChoice = getMachineChoice();
    if (userChoice === machineChoice) {
-    console.log("draw");
+    result.textContent = "Draw";
    }
    else if (userChoice === "rock" && machineChoice === "scissors" 
         ||  userChoice === "paper" && machineChoice === "rock"
         ||  userChoice === "scissors" && machineChoice === "paper") {
-    console.log("You win");
+    result.textContent = "You Win";
     userScore++;
    }
    else {
-    console.log("you lose");
+    result.textContent = "You Lose";
     machineScore++;
    }
 }

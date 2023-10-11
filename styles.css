@@ -60,6 +60,24 @@ h2 {
     border-bottom: #008170 2px solid;
 }
 
+div#tracker {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#round {
+    color: yellow;
+    align-self: center;
+    margin-bottom: 25px;
+}
+
+div#result {
+    color: yellow;
+    align-self: center;
+}
 
 .container {
     display: flex;
