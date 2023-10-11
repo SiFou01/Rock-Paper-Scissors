@@ -59,6 +59,8 @@ let score2 = document.getElementById("machineScore");
 
 let result = document.getElementById("result");
 
+let resultPopUp = document.getElementById("result-popup");
+
 function playGame(userChoice) {
    userChoice = getUserChoice(userChoice);
    machineChoice = getMachineChoice();
@@ -72,12 +74,25 @@ function playGame(userChoice) {
     result.textContent = "You Won !!";
     result.style.color = "green";
     userScore++;
+    if (userScore === 5) {
+        wonLost.textContent = "Impressive! You Defeated The MACHINE";
+        wonLost.style.color = "green";
+        resultPopUp.style.display = "flex";
+        resultPopUp.style.visibility = "initial";
+       } 
    }
    else {
     result.textContent = "You Lost !";
     result.style.color = "red";
     machineScore++;
+    if (machineScore === 5) {
+        wonLost.textContent = "You got absolutely DESTROYED!";
+        wonLost.style.color = "Red";
+        resultPopUp.style.display = "flex";
+       }
    }
    score1.textContent = userScore;
    score2.textContent = machineScore;
 }
+
+let wonLost = document.getElementById("won-lost");
