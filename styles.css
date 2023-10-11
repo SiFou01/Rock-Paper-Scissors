@@ -5,7 +5,7 @@ html {
 body {
     height: 100%;
     margin: 0;
-    background-color: #2f2c37;
+    background-color: #040D12;
 }
 
 .header {
@@ -31,18 +31,24 @@ body {
 
 .player-num {
     font-family: 'Signika', cursive;
-    color: #26b226;
+    color: #008170;
+}
+
+svg {
+    color: #183D3D;
 }
 
 .player-text {
     margin-top: 5px;
     font-family: 'Signika', sans-serif;
+    color: #183D3D;
 }
 
 h2 {
     text-align: center;
     margin: 0;
     font-family: 'Nunito', sans-serif;
+    color: #5C8374;
 }
 
 .weapons {
@@ -51,7 +57,7 @@ h2 {
     justify-content: space-evenly;
     gap: 10px;
     height: 150px;
-    border-bottom: #26b226 2px solid;
+    border-bottom: #008170 2px solid;
 }
 
 
@@ -64,19 +70,19 @@ h2 {
 .rps {
     align-self: center;
     padding: 5px;
-    border: #211249 solid 3px;
+    border: #0F0F0F solid 3px;
     background-color: #3f3f56;
     height: 95px;
     width: 95px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 2px 17px 10px #1f1f31;
+    box-shadow: 0px 2px 17px 6px #232D3F;
 }
 
 .left .rps:hover {
-    box-shadow: 0px 2px 17px 10px #0a3670;
-    background-color: #282865;
+    box-shadow: 0px 2px 12px 6px #226b67;
+    background-color: #008170;
 }
 
 svg.paper {
@@ -98,7 +104,7 @@ svg.paper {
 }
 
 .score h1 {
-    color: #26b226;
+    color: #008170;
     font-size: 60px;
     font-family: "Nunito";
 }
