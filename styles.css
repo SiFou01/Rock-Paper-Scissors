@@ -50,6 +50,8 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
+    height: 150px;
+    border-bottom: #26b226 2px solid;
 }
 
 
@@ -87,4 +89,16 @@ svg.paper {
 
 .rps.scissors-right {
     margin-right: 28px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.score h1 {
+    color: #26b226;
+    font-size: 60px;
+    font-family: "Nunito";
 }
