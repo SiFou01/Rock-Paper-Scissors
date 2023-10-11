@@ -20,7 +20,7 @@ function getUserChoice(userChoice) {
         scissorsBtn.classList.add("clicked")
     }
     roundNum++;
-    round.textContent = `#Round ${roundNum}`;
+    round.textContent = `#Round : ${roundNum}`;
     return userChoice;
 }
 
@@ -43,6 +43,10 @@ function getMachineChoice() {
 let machineScore = 0;
 let userScore = 0;
 
+let score1 = document.getElementById("userScore");
+let score2 = document.getElementById("machineScore");
+
+
 let result = document.getElementById("result");
 
 function playGame(userChoice) {
@@ -50,15 +54,20 @@ function playGame(userChoice) {
    machineChoice = getMachineChoice();
    if (userChoice === machineChoice) {
     result.textContent = "Draw";
+    result.style.color = "blue";
    }
    else if (userChoice === "rock" && machineChoice === "scissors" 
         ||  userChoice === "paper" && machineChoice === "rock"
         ||  userChoice === "scissors" && machineChoice === "paper") {
-    result.textContent = "You Win";
+    result.textContent = "You Won !!";
+    result.style.color = "green";
     userScore++;
    }
    else {
-    result.textContent = "You Lose";
+    result.textContent = "You Lost !";
+    result.style.color = "red";
     machineScore++;
    }
+   score1.textContent = userScore;
+   score2.textContent = machineScore;
 }

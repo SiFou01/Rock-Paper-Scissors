@@ -61,7 +61,7 @@ h2 {
 }
 
 div#tracker {
-    width: 100px;
+    width: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,11 +72,14 @@ div#round {
     color: yellow;
     align-self: center;
     margin-bottom: 25px;
+    font-size: 19px;
+    font-family: "Nunito";
 }
 
 div#result {
-    color: yellow;
     align-self: center;
+    font-size: 17px;
+    font-family: "Signika";
 }
 
 .container {
