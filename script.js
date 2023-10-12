@@ -95,8 +95,7 @@ let resultPopUp = document.getElementById("result-popup");
 
 function stopGame(winner) {
     resultPopUp.style.display = "flex"
-    game.style.opacity = 0.2;
-    game.style.pointerEvents = "none";
+    game.classList.add("blur")
     if (winner === "user")  {
         wonLost.textContent = "Impressive! You Defeated The MACHINE";
         wonLost.style.color = "green";
@@ -105,4 +104,25 @@ function stopGame(winner) {
         wonLost.textContent = "You got absolutely DESTROYED!";
         wonLost.style.color = "Red";
     }
+}
+
+let playAgainBtn = document.querySelector("button");
+playAgainBtn.addEventListener("click", playAgain);
+
+function playAgain() {
+    userScore = 0;
+    machineScore = 0;
+    score1.textContent = "0";
+    score2.textContent = "0";
+    resultPopUp.style.display = "none";
+    game.classList.remove("blur");
+    roundNum = 0;
+    round.textContent = ``;
+    result.textContent = "";
+    machineRock.classList.remove("clicked");
+    machinePaper.classList.remove("clicked");
+    machineScissors.classList.remove("clicked");
+    rockBtn.classList.remove("clicked");
+    paperBtn.classList.remove("clicked");
+    scissorsBtn.classList.remove("clicked");
 }

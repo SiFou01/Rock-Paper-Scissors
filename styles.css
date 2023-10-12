@@ -170,6 +170,11 @@ button {
     font-family: "Nunito";
 }
 
+.blur {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
 h1.won-lost {
     font-family: "Signika";
     text-align: center;
