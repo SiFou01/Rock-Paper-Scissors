@@ -59,40 +59,50 @@ let score2 = document.getElementById("machineScore");
 
 let result = document.getElementById("result");
 
-let resultPopUp = document.getElementById("result-popup");
-
 function playGame(userChoice) {
-   userChoice = getUserChoice(userChoice);
-   machineChoice = getMachineChoice();
-   if (userChoice === machineChoice) {
-    result.textContent = "Draw";
-    result.style.color = "blue";
-   }
-   else if (userChoice === "rock" && machineChoice === "scissors" 
-        ||  userChoice === "paper" && machineChoice === "rock"
-        ||  userChoice === "scissors" && machineChoice === "paper") {
-    result.textContent = "You Won !!";
-    result.style.color = "green";
-    userScore++;
-    if (userScore === 5) {
-        wonLost.textContent = "Impressive! You Defeated The MACHINE";
-        wonLost.style.color = "green";
-        resultPopUp.style.display = "flex";
-        resultPopUp.style.visibility = "initial";
+    userChoice = getUserChoice(userChoice);
+    machineChoice = getMachineChoice();
+    if (userChoice === machineChoice) {
+       result.textContent = "Draw";
+       result.style.color = "blue";
+    }
+    else if (userChoice === "rock" && machineChoice === "scissors" 
+           ||  userChoice === "paper" && machineChoice === "rock"
+           ||  userChoice === "scissors" && machineChoice === "paper") {
+
+       result.textContent = "You Won !!";
+       result.style.color = "green";
+       userScore++;
+       if (userScore === 5) {
+           stopGame("user");
        } 
-   }
-   else {
-    result.textContent = "You Lost !";
-    result.style.color = "red";
-    machineScore++;
-    if (machineScore === 5) {
-        wonLost.textContent = "You got absolutely DESTROYED!";
-        wonLost.style.color = "Red";
-        resultPopUp.style.display = "flex";
+    }
+    else {
+       result.textContent = "You Lost !";
+       result.style.color = "red";
+       machineScore++;
+       if (machineScore === 5) {
+           stopGame("machine");
        }
-   }
-   score1.textContent = userScore;
-   score2.textContent = machineScore;
+    }
+    score1.textContent = userScore;
+    score2.textContent = machineScore;
 }
 
 let wonLost = document.getElementById("won-lost");
+let game = document.getElementById("game");
+let resultPopUp = document.getElementById("result-popup");
+
+function stopGame(winner) {
+    resultPopUp.style.display = "flex"
+    game.style.opacity = 0.2;
+    game.style.pointerEvents = "none";
+    if (winner === "user")  {
+        wonLost.textContent = "Impressive! You Defeated The MACHINE";
+        wonLost.style.color = "green";
+    }
+    else {
+        wonLost.textContent = "You got absolutely DESTROYED!";
+        wonLost.style.color = "Red";
+    }
+}

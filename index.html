@@ -16,8 +16,8 @@
         <h1 class="won-lost" id="won-lost"></h1>
         <button>Play Again</button>
     </div>
-    <div class="hidden">
-    <div class="header">
+    <div id="game">
+        <div class="header">
         <div class="player">
             <h1 class="player-num">PLAYER 1</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 14 14">
@@ -35,9 +35,9 @@
             </svg>
             <h1  class="player-text">MACHINE</h1>
         </div>
-    </div>
-    <h2>Choose your weapon :</h2>
-    <div class="weapons">
+        </div>
+        <h2>Choose your weapon :</h2>
+        <div class="weapons">
         <div class="container left">
             <div class="rps" onclick="playGame('rock')" id="rock">
                 <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
@@ -76,12 +76,12 @@
                 </svg>
             </div>
         </div>
-    </div>
-    <div class="score">
+        </div>
+        <div class="score">
         <h1 id="userScore">0</h1>
         <h1>-</h1>
         <h1 id="machineScore">0</h1>
-    </div>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
