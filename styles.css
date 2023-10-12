@@ -170,6 +170,10 @@ button {
     font-family: "Nunito";
 }
 
+button:hover {
+    box-shadow: 0px 0px 7px 1px #21219b;
+}
+
 .blur {
     opacity: 0.2;
     pointer-events: none;
