@@ -183,3 +183,16 @@ h1.won-lost {
     font-family: "Signika";
     text-align: center;
 }
+
+h3 {
+    position: absolute;
+    padding-left: 1150px;
+    padding-top: 120px;
+    font-family: "Merienda", cursive, sans-serif;
+    color: #183D3D;
+}
+
+a {
+    text-decoration: none;
+    color: #008170;
+}
